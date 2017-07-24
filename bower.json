@@ -1,0 +1,17 @@
+{
+  "name": "epiplaylist",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Dan Jacob <dansamueljacob@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
