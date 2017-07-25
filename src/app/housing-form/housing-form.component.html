@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>Housing Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" #address placeholder="Ex: 42 Wallaby Way" required>
+      </div>
+
+      <div class="form-group">
+        <label for="zipcode">Zip Code</label>
+        <input type="text" class="form-control" id="zipcode" #zipcode placeholder="Ex:12345" required>
+      </div>
+
+      <button (click)="getHousingInfo(address.value, zipcode.value)">Go!</button>
+
+    </form>
+</div>
+<div *ngIf="housing_data">
+  <app-housing-data-list [childHousingData]="housing_data"></app-housing-data-list>
+</div>

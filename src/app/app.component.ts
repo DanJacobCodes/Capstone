@@ -8,5 +8,5 @@ import {HttpModule} from '@angular/http'
   providers:[HttpModule]
 })
 export class AppComponent {
-  title = 'EpiPlaylist';
+  title = 'WorkingTitle';
 }
