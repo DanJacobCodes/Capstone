@@ -5,11 +5,18 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpModule } from '@angular/http';
 import { HousingFormComponent } from './housing-form/housing-form.component';
+import { LoginComponent } from './login/login.component';
 
 
 const appRoutes: Routes = [
+
   {
     path: '',
+    component: LoginComponent
+  },
+
+  {
+    path: 'welcome',
     component: WelcomeComponent
 
   },
