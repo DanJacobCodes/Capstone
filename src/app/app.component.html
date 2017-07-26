@@ -5,11 +5,12 @@
     </div>
     <ul class="nav navbar-nav navbar-center">
       <li><a routerLink="">Home</a></li>
-      <li><a routerLink="contact">Contact</a></li>
       <li><a routerLink="housing-form">Search</a></li>
-      <li *ngIf="isLoggedIn"> .
-      <a>{{userName}}</a>
+      <li><a routerLink="contact">Contact</a></li>
+      <li *ngIf="isLoggedIn">
       <a (click)="logout()">Log out</a>
+      <a>{{userName}}</a>
+
     </li>
     <li *ngIf ="!isLoggedIn">
       <a (click)="login()">Log in</a>

@@ -7,7 +7,9 @@ export class HomeStatsService {
 
   constructor(private http: Http) { }
 
-  getByAddressAndZip(address: string, zipcode: string) {
+
+  getByAddressAndZip(address: string, zipcode: string, ) {
+
     return this.http.get("https://api.housecanary.com/v2/property/value?address="+address+"&zipcode="+zipcode)
 
   }
