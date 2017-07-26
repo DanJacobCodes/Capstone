@@ -1,3 +1,19 @@
 .login {
-  width: 40%;
+  background-color: #256BDE;
+  margin-top: 20%;
+  width: 60%;
+  font-family: 'Righteous', cursive;
+  color: white;
+  text-align: center;
+
+}
+
+#submit {
+margin-bottom: 5%;
+}
+
+#sign_up {
+  color:white;
+  padding-left: 20px;
+  margin-top: 20px;
 }
