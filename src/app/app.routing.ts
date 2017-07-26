@@ -7,8 +7,6 @@ import { HttpModule } from '@angular/http';
 import { HousingFormComponent } from './housing-form/housing-form.component';
 
 
-
-
 const appRoutes: Routes = [
   {
     path: '',
