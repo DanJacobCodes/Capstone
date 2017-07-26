@@ -3,10 +3,18 @@
     <div class="navbar-header">
       <a class="navbar-brand" routerLink="">WorkingTitle</a>
     </div>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-center">
       <li><a routerLink="">Home</a></li>
       <li><a routerLink="contact">Contact</a></li>
-      <li><a routerLink="housing-form">Searcn</a></li>
+      <li><a routerLink="housing-form">Search</a></li>
+      <li *ngIf="isLoggedIn"> .
+      <a>{{userName}}</a>
+      <a (click)="logout()">Log out</a>
+    </li>
+    <li *ngIf ="!isLoggedIn">
+      <a (click)="login()">Log in</a>
+    </li>
+
 
     </ul>
   </div>

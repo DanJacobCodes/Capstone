@@ -12,6 +12,19 @@ import { LoginComponent } from './login/login.component';
 import { HousingFormComponent } from './housing-form/housing-form.component';
 import { HousingDataListComponent } from './housing-data-list/housing-data-list.component';
 import {Component, Input, Output} from '@angular/core';
+import { masterFirebaseConfig } from './api-keys';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+
+export const firebaseConfig = {
+  apiKey: masterFirebaseConfig.apiKey,
+  authDomain: masterFirebaseConfig.authDomain,
+  databaseURL: masterFirebaseConfig.databaseURL,
+  storageBucket: masterFirebaseConfig.storageBucket
+};
+
 
 
 @NgModule({
@@ -29,8 +42,12 @@ import {Component, Input, Output} from '@angular/core';
     FormsModule,
     HttpModule,
     HttpClientModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })
