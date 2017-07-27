@@ -6,6 +6,8 @@ import { ContactComponent } from './contact/contact.component';
 import { HttpModule } from '@angular/http';
 import { HousingFormComponent } from './housing-form/housing-form.component';
 import { LoginComponent } from './login/login.component';
+import { HomeDetailComponent } from './home-detail/home-detail.component';
+
 
 
 const appRoutes: Routes = [
@@ -27,6 +29,11 @@ const appRoutes: Routes = [
   {
     path: 'housing-form',
     component: HousingFormComponent
+  },
+
+  {
+    path: 'homes/:id',
+    component: HomeDetailComponent
   }
 
 ];
