@@ -1,0 +1,27 @@
+{ "homes": [{
+  "type": "Condo",
+  "address": "2121 Waterview Ave",
+  "zipcode": "19116",
+  "description": "New development",
+  "price": "$2500/mo",
+  "id": "1"
+  },
+
+  {
+    "type": "Townhouse",
+    "address": "2311 Newtown Lane",
+    "zipcode": "19118",
+    "description": "Mid-Century Modern",
+    "price": "$2,500,000",
+    "id": "1"
+    },
+
+    {
+      "type": "Home",
+      "address": "2412 Epicodus Ave",
+      "zipcode": "98118",
+      "description": "Developing",
+      "price": "$500,000",
+      "id": "1"
+  }]
+}

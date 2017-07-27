@@ -1,22 +1,24 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Home } from '../home.model';
 import { Router } from '@angular/router';
+import { HomeService } from '../home.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.css']
+  styleUrls: ['./welcome.component.css'],
+  providers: [HomeService]
 })
 
-export class WelcomeComponent  {
-  constructor(private router: Router) {}
+export class WelcomeComponent implements OnInit  {
+  homes:FirebaseListObservable<any[]>;
 
-  homes: Home[] = [
-    new Home("Condo", "1234 Test Street", 19116, "New development", 100000, 1),
-    new Home("Townhouse", "2121 Issa Road", 19115, "Personal Garage", 500000, 2),
-    new Home("House", "4000 Key Street", 19116, "Under market value", 420000, 3),
-    new Home("Studio", "981121 New Ave", 19116, "First month free", 45000, 4)
-  ];
+  constructor(private router: Router, private homeService: HomeService) {}
+
+  ngOnInit(){
+    this.homes = this.homeService.getHomes();
+  }
 
   goToDetailPage(clickedHome: Home) {
     this.router.navigate(['homes', clickedHome.id]);
