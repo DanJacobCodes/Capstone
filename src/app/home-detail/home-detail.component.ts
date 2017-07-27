@@ -13,16 +13,19 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
   providers:[HomeService]
 })
 export class HomeDetailComponent implements OnInit {
-  homeID: number = null;
+  homeID: string;
   homeToDisplay;
 
-  constructor(private route: ActivatedRoute, private location: Location) { }
+  constructor(private route: ActivatedRoute,
+    private location: Location,
+    private homeService: HomeService
+  ) { }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
-     this.homeID = parseInt(urlParameters['id']);
+     this.homeID = urlParameters['id'];
    });
-   this.homeToDisplay = this.homeService.getHomeById(this.homeID)
+   this.homeToDisplay = this.homeService.getHomeById(this.homeID);
   }
 
 }

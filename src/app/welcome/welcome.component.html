@@ -2,7 +2,7 @@
 <h3>Welcome</h3>
 <br>
 
-<div *ngFor="let home of homes"  (click)="goToDetailPage(home)" class="panel panel-default">
+<div *ngFor="let home of homes | async"  (click)="goToDetailPage(home)" class="panel panel-default">
   <div class="panel-body">
     <h3><em>{{home.type}}</em> by {{home.price}}</h3>
   </div>

@@ -13,7 +13,7 @@ export class AddHomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitHomeForm(type:string, address:string, zipcode:number, description:string, price:number, id:number){
+  submitHomeForm(type:string, address:string, zipcode:number, description:string, price:number, id:string){
     var newHome: Home = new Home(type, address, zipcode, description, price, id);
   }
 
