@@ -12,7 +12,7 @@ export class AppComponent {
   user;
   private isLoggedIn: Boolean;
   private userName: String;
-  title = 'WorkingTitle';
+  title = 'Idk';
 
   constructor(public authService: AuthenticationService) {
     this.authService.user.subscribe(user => {
