@@ -16,6 +16,9 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { HomeDetailComponent } from './home-detail/home-detail.component';
+import { AllHomesComponent } from './all-homes/all-homes.component';
+import { AddHomeComponent } from './add-home/add-home.component';
 
 
 export const firebaseConfig = {
@@ -35,7 +38,10 @@ export const firebaseConfig = {
     ContactComponent,
     LoginComponent,
     HousingFormComponent,
-    HousingDataListComponent
+    HousingDataListComponent,
+    HomeDetailComponent,
+    AllHomesComponent,
+    AddHomeComponent
   ],
   imports: [
     BrowserModule,
