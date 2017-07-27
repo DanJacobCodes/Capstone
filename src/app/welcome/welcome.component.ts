@@ -20,8 +20,8 @@ export class WelcomeComponent implements OnInit  {
     this.homes = this.homeService.getHomes();
   }
 
-  goToDetailPage(clickedHome: Home) {
-    this.router.navigate(['homes', clickedHome.id]);
+  goToDetailPage(clickedHome) {
+    this.router.navigate(['homes', clickedHome.$key]);
   };
 
 }

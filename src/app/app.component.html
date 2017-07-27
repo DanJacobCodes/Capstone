@@ -1,33 +1,28 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">Idk</a>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="">Title</a>
+      </div>
+      <ul class="nav navbar-nav navbar-center">
+        <li><a routerLink="welcome">Home</a></li>
+        <li><a routerLink="housing-form">Search</a></li>
+        <li><a routerLink="contact">Contact</a></li>
+        <li *ngIf="isLoggedIn">
+          <a (click)="logout()">Log out |{{userName}}</a>
+          <a class="text-muted" routerLink="add-home">Add Home</a>
+
+        </li>
+        <li *ngIf ="!isLoggedIn">
+          <a (click)="login()">Log in</a>
+        </li>
+
+
+      </ul>
     </div>
-    <ul class="nav navbar-nav navbar-center">
-      <li><a routerLink="welcome">Home</a></li>
-      <li><a routerLink="housing-form">Search</a></li>
-      <li><a routerLink="contact">Contact</a></li>
-      <li *ngIf="isLoggedIn">
-      <a (click)="logout()">Log out</a>
-      <a>{{userName}}</a>
+  </nav>
 
-    </li>
-    <li *ngIf ="!isLoggedIn">
-      <a (click)="login()">Log in</a>
-    </li>
-
-
-    </ul>
-  </div>
-</nav>
-
-<div class="container">
-  <h1>{{title}}</h1>
-  <router-outlet></router-outlet>
-</div>
-
-<footer class="footer">
   <div class="container">
-    <a class="text-muted" routerLink="add-home">Add Home</a>
+    <router-outlet></router-outlet>
   </div>
-</footer>
+</body>

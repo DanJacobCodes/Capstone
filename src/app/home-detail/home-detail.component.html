@@ -1,1 +1,7 @@
 <h2>Details</h2>
+<h4>Home Type: {{(homeToDisplay | async)?.type}}</h4>
+ <h4>Lising Price: {{(homeToDisplay | async)?.price}}</h4>
+ <h4>Address: {{(homeToDisplay | async)?.address}}</h4>
+ <h4>Zip: {{(homeToDisplay | async)?.zipcode}}</h4>
+ <hr>
+<h1>{{(homeToDisplay | async)?.description}}</h1>

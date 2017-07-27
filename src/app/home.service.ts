@@ -15,6 +15,10 @@ export class HomeService {
     return this.homes;
   }
 
+  addHome(newHome: Home){
+    this.homes.push(newHome)
+  }
+
   getHomeById(homeID: string) {
     return this.database.object('homes/' + homeID);
   }
