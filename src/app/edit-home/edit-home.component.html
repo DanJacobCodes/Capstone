@@ -1,0 +1,39 @@
+<h3>Add a Listing</h3>
+<div>
+  <div>
+    <label>Home Type:</label>
+    <br>
+    <select #newHomeType>
+      <option value="home">Home</option>
+      <option value="condo">Condo</option>
+      <option value="apartment">Apartment</option>
+      <option value="townhouse">Townhouse</option>
+      <option value="studio">Studio</option>
+    </select>
+  </div>
+<br>
+  <div>
+    <label>Address:</label>
+    <br>
+    <input #newAddress required>
+  </div>
+
+  <div>
+    <label>Zip Code:</label>
+    <br>
+    <input #newZipCode required>
+  </div>
+
+  <div>
+    <label>Price:</label>
+    <br>
+    <input #newPrice required>
+  </div>
+
+  <div>
+    <label>Home Description:</label>
+    <br>
+    <textarea #newDescription required></textarea>
+  </div>
+</div>
+<button (click)="submitHomeForm(newHomeType.value, newAddress.value, newZipCode.value, newPrice.value, newDescription.value); newHomeType.value = ''; newAddress.value = ''; newZipCode.value = ''; newPrice.value = ''; newDescription.value = '' ">Add</button>

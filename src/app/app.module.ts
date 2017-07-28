@@ -18,6 +18,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { HomeDetailComponent } from './home-detail/home-detail.component';
 import { AllHomesComponent } from './all-homes/all-homes.component';
 import { AddHomeComponent } from './add-home/add-home.component';
+import { EditHomeComponent } from './edit-home/edit-home.component';
 
 
 export const firebaseConfig = {
@@ -39,7 +40,8 @@ export const firebaseConfig = {
     HousingDataListComponent,
     HomeDetailComponent,
     AllHomesComponent,
-    AddHomeComponent
+    AddHomeComponent,
+    EditHomeComponent
   ],
   imports: [
     BrowserModule,
