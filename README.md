@@ -1,28 +1,58 @@
 # Capstone
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+### By Dan Jacob 7/29/17
 
-## Development server
+Capstone/Side Project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Goals/Description
+ A web application that can help users find properties in a certain area. The purpose of this project is to build out an MLS (Multiple Listing Service) similar to the ones used in the Real Estate industry, somewhat like Redfin. It will allow users to login, save certain properties, filter by certain properties, and search for specific property values using the House Canary API. 
 
-## Code scaffolding
+## Specs/User Stories
+* Users will be able to save selected properties to a board
+* Users will be able to search for properties based on certain filters
+* Users will be able to get a listing of properties from HouseCanary API
+* Users will be able to add notes about a listing
+* Users will able to login to view their profile/boards
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Planning 
+* Full CRUD functionality for Users to remove listings from their boards, update the names of boards, delete property from board or the board completely.
+* Full CRUD for admins, to delete listings, update listings, edit and creating listings
+* Implement successfull API call
+* Overhaul design 
+* Test using Karma
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Future Goals
+  * Add ability to compare listings
+  * Add ability to save to a Database
+  * Add fully functional login for Twitter, FB, Gmail...
+  * Allow users to create a user profile
+  
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Prerequisites
+You will need the following things properly installed on your computer.
 
-## Running end-to-end tests
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+## Installation
 
-## Further help
+* `git clone <repository-url>` this repository
+* `npm install`
+* `bower install`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Running / Development
+
+* `ng serve`
+
+## Support and contact details
+
+Should any issues occur contact me at dansamueljacob@gmail.com
+
+## Technologies Used
+ HTML, CSS, Bootstrap, JavaScript, NPM, node.JS, bower, gulp, Angular 2, Karma-Jasmine
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
